@@ -1,7 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import session from "express-session";
-import globalRouter from "./routers/rootRouter";
+import rootRouter from "./routers/rootRouter";
 import userRouter from "./routers/userRouter";
 import videoRouter from "./routers/videoRouter";
 import { localsMiddleware } from "./middlewares";
@@ -20,8 +20,8 @@ app.use(
   })
 );
 app.use(localsMiddleware);
-
-app.use("/", globalRouter);
+app.use("/uploads", express.static("uploads"));
+app.use("/", rootRouter);
 app.use("/users", userRouter);
 app.use("/videos", videoRouter);
 
