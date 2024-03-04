@@ -4,6 +4,7 @@ html(lang="ko")
     title 
       #{pageTitle} | Wetube
     link(rel="stylesheet", href="https://unpkg.com/mvp.css")
+    link(rel="stylesheet", href="/static/css/styles.css")
   body
     header
       h1=pageTitle 
@@ -26,5 +27,6 @@ html(lang="ko")
           li 
             a(href="/search") Search
     main
-        block content
+      block content
   include partials/footer.pug
+  script(src="/static/js/main.js")

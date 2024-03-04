@@ -26,8 +26,8 @@ userRouter
   .all(protectorMiddleware)
   .get(getChangePassword)
   .post(postChangePassword);
-userRouter.get("/github/start", publicOnlyMiddleware, startGithubLogin);
-userRouter.get("/github/finish", publicOnlyMiddleware, finishGithubLogin);
+// userRouter.get("/github/start", publicOnlyMiddleware, startGithubLogin);
+// userRouter.get("/github/finish", publicOnlyMiddleware, finishGithubLogin);
 userRouter.get("/remove", remove);
 userRouter.get("/:id", see);
 
